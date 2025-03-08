@@ -1,6 +1,4 @@
-import { useState } from "react"
-
-export default function UserInput(){
+export default function UserInput({userInput, onChange}){
     
 
     
@@ -11,14 +9,14 @@ export default function UserInput(){
                     <label>Initial Investment</label>
                     <input type="number" 
                     value={userInput.initialInvestment}
-                    onChange={(event)=>handleChange('initialInvestment', event.target.source)} 
+                    onChange={(event)=>onChange('initialInvestment', event.target.value)} 
                     required/>
                 </p>
                 <p>
                     <label>Anuual Investment</label>
                     <input type="number" 
                     value={userInput.annualInvestment}
-                    onChange={(event)=>handleChange('annualInvestment', event.target.source)} 
+                    onChange={(event)=>onChange('annualInvestment', event.target.value)} 
                     required/>
                 </p>
             </div>
@@ -27,14 +25,14 @@ export default function UserInput(){
                     <label>Expected Returns</label>
                     <input type="number" 
                     value={userInput.expectedReturn}
-                    onChange={(event)=>handleChange('expectedReturn', event.target.source)} 
+                    onChange={(event)=>onChange('expectedReturn', event.target.value)} 
                     required/>
                 </p>
                 <p>
                     <label>Duration</label>
                     <input type="number" 
-                    value={userInput.durations}
-                    onChange={(event)=>handleChange('durations', event.target.source)} 
+                    value={userInput.duration}
+                    onChange={(event)=>onChange('duration', event.target.value)} 
                     required/>
                 </p>
             </div>
